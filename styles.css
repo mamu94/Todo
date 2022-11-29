@@ -92,6 +92,20 @@ body {
     min-height: 100vh;
 }
 
+#popUp {
+    width: 70%;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8%;
+    transition: 300ms;
+}
+
 @media only screen and (max-width: 600px) {
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
