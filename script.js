@@ -3,7 +3,6 @@ let i = 1
 let y = 1
 let x = 1
 
-//setTimeout(getStorage, 500)
 
 document.getElementById("confirmTask").addEventListener("click", addTask)
 
@@ -19,7 +18,6 @@ function addTask() {
         document.getElementById("insertTask").value = ""
         addDeleteBtn();
         document.getElementById("taskList").style.padding = 10 + "px"
-        //localStorage.setItem(newTask.id, getTask);
     } else {
         
         var popup = document.createElement("div")
@@ -58,37 +56,3 @@ function deleteItem() {
     }
 
 }
-
-function getStorage() {
-    
-    for (let i = 1; i <= localStorage.length; i++) {
-    
-    
-        var newTask = document.createElement("span");
-        newTask.id = "task" + i
-        newTask.className = "tasks";
-        document.getElementById("taskList").appendChild(newTask);
-        addDeleteBtn();
-        document.getElementById("taskList").style.padding = 10 + "px"
-        newTask.innerHTML = localStorage.getItem("task" + i)
-
-        var deleteBtn = document.createElement("span")
-        deleteBtn.id = "deleteTask" + i
-        deleteBtn.className = "material-symbols-outlined"
-        deleteBtn.innerHTML = "delete"
-        document.getElementById("task" + i).appendChild(deleteBtn)
-        deleteBtn.onclick = deleteItem;
-        
-    }
-
-}
-
-    
-    $(document).ready(function(){
-        $("span").on({
-            mouseenter: function(){
-            $(this).css({"text-decoration": "line"});
-            }
-        });    
-    });
-
